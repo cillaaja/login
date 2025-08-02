@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard Login - karinDev</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(135deg, #1e1f29, #3a3b52);
+      color: #fff;
+    }
+
+    .container {
+      width: 400px;
+      background: rgba(255, 255, 255, 0.05);
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+      backdrop-filter: blur(10px);
+      text-align: center;
+      transition: 0.3s;
+    }
+
+    .container h2 {
+      margin-bottom: 20px;
+      font-size: 26px;
+      letter-spacing: 1px;
+    }
+
+    .input-group {
+      margin-bottom: 20px;
+      text-align: left;
+    }
+
+    .input-group label {
+      font-size: 14px;
+      margin-bottom: 5px;
+      display: block;
+    }
+
+    .input-group input {
+      width: 100%;
+      padding: 10px;
+      border: none;
+      outline: none;
+      border-radius: 10px;
+      background: rgba(255, 255, 255, 0.1);
+      color: #fff;
+      font-size: 16px;
+    }
+
+    .btn {
+      width: 100%;
+      padding: 12px;
+      background: #4f46e5;
+      border: none;
+      border-radius: 10px;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      color: #fff;
+      transition: background 0.3s ease;
+    }
+
+    .btn:hover {
+      background: #3730a3;
+    }
+
+    .footer {
+      margin-top: 15px;
+      font-size: 13px;
+      opacity: 0.8;
+    }
+
+    /* Dashboard setelah login */
+    .dashboard {
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      width: 400px;
+    }
+
+    .dashboard h1 {
+      font-size: 28px;
+      margin-bottom: 20px;
+    }
+
+    .logout {
+      padding: 10px 20px;
+      background: #ef4444;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      font-weight: bold;
+      color: #fff;
+      transition: 0.3s;
+    }
+
+    .logout:hover {
+      background: #b91c1c;
+    }
+  </style>
+</head>
+<body>
+  <div class="container" id="login-container">
+    <h2>Login Dashboard</h2>
+    <div class="input-group">
+      <label>Username</label>
+      <input type="text" id="username" placeholder="Masukkan username">
+    </div>
+    <div class="input-group">
+      <label>Password</label>
+      <input type="password" id="password" placeholder="Masukkan password">
+    </div>
+    <button class="btn" id="loginBtn">Login</button>
+    <div class="footer">Dibuat oleh <b>karinDev</b></div>
+  </div>
+
+  <div class="dashboard" id="dashboard">
+    <h1>Selamat Datang di Dashboard!</h1>
+    <p>Halo <span id="user-name"></span>, ini adalah landing page keren buatan <b>karinDev</b>.</p>
+    <button class="logout" id="logoutBtn">Logout</button>
+  </div>
+
+  <!-- Panggil file JavaScript eksternal -->
+  <script src="script.js"></script>
+</body>
+</html>
